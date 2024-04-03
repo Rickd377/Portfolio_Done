@@ -1,19 +1,16 @@
+/* body */
+
 body {
   --bg-color: #dde1e7;
 
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--bg-color);
   text-align: left;
   min-height: 100vh;
   overflow: hidden;
   box-shadow: inset 0 0 15px 5px rgba(#255, #255, #255, 0.3);
-}
-
-@font-face {
-  font-family: roboto;
-  src: url(../fonts/Roboto-Regular.ttf);
 }
 
 /*start of nav styling*/
@@ -24,7 +21,7 @@ body {
   grid-area: nav;
   list-style-type: none;
   text-decoration: none;
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   font-size: large;
   font-weight: 500;
   display: grid;
@@ -136,7 +133,6 @@ ul li p {
   border-radius: 0 100vw 0 0;
   box-shadow: 10px -10px 0 10px var(--bg-color);
 }
-/*end of nav styling*/
 
 .nav_pic {
   background: url(/Images/pfp.jpg);
@@ -157,19 +153,7 @@ ul li p {
   user-select: none;
 }
 
-#clock {
-  text-align: center;
-  color: white;
-  margin-top: -20px;
-  font-family: roboto;
-  font-size: 1.5em;
-  user-select: none;
-  transition: 0.3s ease;
-}
-
-#clock:hover {
-  transform: scale(1.2);
-}
+/*end of nav styling*/
 
 /*start of main styling*/
 
@@ -205,7 +189,7 @@ ul li p {
 
 .portfolio_title::before {
   content: "Hi, I'm";
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 1.1em;
   font-weight: 600;
   margin-bottom: -25px;
@@ -214,7 +198,7 @@ ul li p {
 
 .portfolio_title::after {
   content: "Software Developer";
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 1.1em;
   font-weight: 600;
   margin-top: -25px;
@@ -231,58 +215,88 @@ ul li p {
   position: fixed;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.blob1,
+.blob2,
+.blob3,
+.blob4,
+.blob5,
+.blob6 {
+  transform: scale(1.2);
+}
+
 .blob1 {
-  width: 14rem;
-  height: 14rem;
-  top: -7rem;
-  right: -7rem;
+  width: 15rem;
+  height: 15rem;
+  top: -5rem;
+  right: -5rem;
   background-color: #009fff;
   z-index: 5;
+  border-radius: 49% 51% 51% 49%;
+  animation: rotate 9s linear infinite;
 }
 
 .blob2 {
-  width: 28rem;
-  height: 28rem;
+  width: 25rem;
+  height: 25rem;
   background-color: #32b2ff;
-  top: -14rem;
-  right: -14rem;
+  top: -10rem;
+  right: -10rem;
   z-index: 4;
+  border-radius: 49% 51% 51% 49%;
+  animation: rotate 11s linear infinite;
 }
 
 .blob3 {
-  width: 42rem;
-  height: 42rem;
+  width: 35rem;
+  height: 35rem;
   background-color: #66c5ff;
-  top: -21rem;
-  right: -21rem;
+  top: -15rem;
+  right: -15rem;
   z-index: 3;
+  border-radius: 49% 51% 51% 49%;
+  animation: rotate 13s linear infinite;
 }
 
 .blob4 {
-  width: 56rem;
-  height: 56rem;
+  width: 45rem;
+  height: 45rem;
   background-color: #99d8ff;
-  top: -28rem;
-  right: -28rem;
+  top: -20rem;
+  right: -20rem;
   z-index: 2;
+  border-radius: 49% 51% 51% 49%;
+  animation: rotate 15s linear infinite;
 }
 
 .blob5 {
-  width: 70rem;
-  height: 70rem;
+  width: 55rem;
+  height: 55rem;
   background-color: #ccebff;
-  top: -35rem;
-  right: -35rem;
+  top: -25rem;
+  right: -25rem;
   z-index: 1;
+  border-radius: 49% 51% 51% 49%;
+  animation: rotate 17s linear infinite;
 }
 
 .blob6 {
-  width: 84rem;
-  height: 84rem;
+  width: 65rem;
+  height: 65rem;
   background-color: #e5f5ff;
-  top: -42rem;
-  right: -42rem;
+  top: -30rem;
+  right: -30rem;
   z-index: 0;
+  border-radius: 49% 51% 51% 49%;
+  animation: rotate 19s linear infinite;
 }
 
 .colored-bg {
@@ -344,7 +358,7 @@ ul li p {
 .socialmedia::after {
   content: "Email: rick-2007@outlook.com";
   position: absolute;
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   top: -30px;
   left: 41%;
   transform: translateX(-50%);
@@ -406,10 +420,10 @@ ul li p {
   }
 }
 
-span {
+.rotatingSpan {
   position: absolute;
   transform-origin: 0 105px;
-  font-family: roboto;
+  font-family: "Roboto", sans-serif;
   font-weight: 800;
   text-transform: capitalize;
   z-index: 100;
@@ -455,13 +469,7 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    to bottom right,
-    #009fff 0%,
-    #32b2ff 20%,
-    #66c5ff 40%,
-    #99d8ff 100%
-  );
+  background-color: #e8ecef;
   color: black;
   border-radius: 20px;
   padding: 20px;
@@ -469,7 +477,8 @@ span {
   cursor: pointer;
   transition: 0.3s ease;
   width: 250px;
-  max-height: 20rem;
+  max-height: 19rem;
+  min-height: 19rem;
   overflow: hidden;
   position: relative;
   z-index: 10;
@@ -488,7 +497,7 @@ span {
 }
 
 #projects .project:hover {
-  transform: rotate(3deg) scale(1.1);
+  transform: rotate(1deg) scale(1.05);
 }
 
 #projects .project:hover:before {
@@ -508,4 +517,38 @@ span {
   width: 40%;
   filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.2));
   margin-top: auto;
+}
+
+.guestbookimg {
+  width: 45%;
+  border-radius: 10px;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  background-color: #e8ecef;
+  width: fit-content;
+  padding: 20px;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+  /* margin-top: 45vh; */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  word-wrap: break-word;
+  margin-top: 20px;
+}
+
+.profile_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -400px;
+  font-size: 2.5em;
+  text-align: center;
+  position: relative;
+  margin-top: 35vh;
+  font-weight: 500;
 }
