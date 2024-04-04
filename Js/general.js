@@ -12,3 +12,27 @@ window.onload = () => {
   }
 };
 
+// hamburger menu
+
+const hamburger = document.querySelector(".res-menu");
+let menuOpen = false;
+hamburger.addEventListener("click", () => {
+  const content = document.querySelector('.dropdown-content .content');
+  if (!menuOpen) {
+    hamburger.classList.add("open");
+    menuOpen = true;
+    content.style.display = 'block';
+    setTimeout(() => {
+      content.style.visibility = 'visible';
+      content.style.opacity = '1';
+    }, 0);
+  } else {
+    hamburger.classList.remove("open");
+    menuOpen = false;
+    content.style.opacity = '0';
+    setTimeout(() => {
+      content.style.visibility = 'hidden';
+      content.style.display = 'none';
+    }, 500);
+  }
+});
