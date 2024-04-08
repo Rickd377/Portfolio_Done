@@ -83,9 +83,11 @@ h3 {
   border-radius: 10px;
   background-color: #fff;
   max-height: fit-content;
+  /* min-height: 150px; */
   margin-right: 10px;
   max-width: 850px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+  /* overflow: hidden; */
 }
 
 .messageinput {
@@ -131,6 +133,7 @@ h3 {
   align-items: flex-start;
   margin-right: 10px; /* voeg wat ruimte toe tussen de tekst en de afbeelding */
   /* margin-left: auto; verwijder deze regel */
+  word-break: break-all;
 }
 
 .date {
@@ -142,7 +145,7 @@ h3 {
 }
 
 .textmessage {
-  word-wrap: break-word;
+  word-break: break-all;
 }
 
 input[type="submmit"] {
