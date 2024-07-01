@@ -347,7 +347,7 @@ ul li p {
   z-index: 3;
 }
 
-.socialmedia i {
+.socialmedia i:not(.fa-eye) {
   cursor: pointer;
   border-radius: 100vh;
   background-color: #333;
@@ -553,6 +553,51 @@ ul li p {
   position: relative;
   margin-top: 35vh;
   font-weight: 500;
+}
+
+input[type="password"] {
+  background-color: #32b2ff;
+  outline: none;
+  border: none;
+  color: white;
+  margin-left: 10px;
+  margin-top: -20px;
+  padding: 0;
+  width: 100px;
+  cursor: pointer;
+}
+
+#password-input::placeholder {
+  color: white;
+}
+
+#phone-number {
+  font-size: 13px;
+  margin-left: 20px;
+  margin-top: -8px;
+}
+
+#phone-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#phone-container button {
+  border-radius: 50vh;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  margin-top: -20px;
+  cursor: pointer;
+}
+
+#phone-container i {
+  font-size: 15px;
+  margin: auto;
 }
 
 @media screen and (max-width: 426px) {
